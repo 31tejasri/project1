@@ -1,0 +1,120 @@
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added box-sizing for better layout handling */
+}
+
+/* General Body Styles */
+body {
+  background: #DCDCDC;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the Calculator */
+.container {
+  position: relative;
+  z-index: 100;
+  height: 405px;
+  width: 235px;
+  margin: 50px auto 0 auto;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fff; /* Ensure background color is white */
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+}
+
+/* Display input styles (where the result is shown) */
+#display {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 30px; /* Increased font size for better readability */
+  background: linear-gradient(to top right, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.6));
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  height: 120px;
+  width: 100%; /* Makes display take the full width of the container */
+  padding: 10px;
+  border: none;
+}
+
+/* Button styles */
+button {
+  font-weight: bold;
+  font-family: Century Gothic, sans-serif;
+  font-size: 18px;
+  width: 58.75px;
+  height: 57px;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background: #F5F5F5; /* Default button color */
+  border: 1px solid #ddd; /* Border for buttons */
+  margin: 5px;
+  border-radius: 5px;
+  flex: 1 0 20%; /* Make buttons take up 20% of the container width */
+}
+
+/* Hover effect for gray buttons */
+.graybuttons:hover {
+  background-color: #e7e7e7; /* Light gray hover color */
+}
+
+/* Button color for white background */
+.whitecolor {
+  background: #F5F5F5;
+}
+
+/* Special button styling for the zero button */
+.zero {
+  width: 117.5px; /* Wider button for zero */
+  background: #F5F5F5;
+  border-bottom-left-radius: 6px;
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Special button styling for the equal button */
+.equal {
+  background: #DB7093; /* Light pink background */
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+/* Gradient background for certain buttons */
+.gradientback {
+  background: linear-gradient(to top right, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.6));
+}
+
+/* Gradient color text (for example, used in the equal button) */
+.gradientcolor {
+  color: #DB7093;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 20px auto; /* Reduced margin for smaller screens */
+  }
+
+  #display {
+    width: 100%;
+    height: 30%;
+    font-size: 25px; /* Adjust font size for smaller screens */
+  }
+
+  button {
+    width: 25%; /* Buttons take up 25% width on smaller screens */
+    height: 14%;
+    font-size: 16px; /* Smaller font size on mobile */
+  }
+
+  .zero {
+    width: 50%; /* Zero button takes up half the width */
+    height: 14%;
+  }
+}
